@@ -1,8 +1,9 @@
 /**
  *   ownCloud Android client application
  *
+ *   @author Christian Schabesberger
  *   Copyright (C) 2012  Bartek Przybylski
- *   Copyright (C) 2017 ownCloud GmbH.
+ *   Copyright (C) 2018 ownCloud GmbH.
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License version 2,
@@ -131,11 +132,11 @@ public class FileDataStorageManager {
      * This will return a OCFile by its given FileId here refered as the remoteId.
      * Its the fileId ownCloud Core uses to identify a file even if its name has changed.
      *
-     * An Explenation about how to use ETags an those FileIds can be found here:
+     * An explanation about how to use ETags an those FileIds can be found here:
      * <a href="https://github.com/owncloud/client/wiki/Etags-and-file-ids" />
      *
-     * @param remoteID
-     * @return
+     * @param remoteID The Id with which a file is referenced in the server.
+     * @return The OCFile related to remoteID
      */
     public OCFile getFileByRemoteId(String remoteID) {
         Cursor c = getFileCursorForValue(ProviderTableMeta.FILE_REMOTE_ID, remoteID);
