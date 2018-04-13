@@ -102,7 +102,7 @@ public class LocalFolderPickerActivity extends ToolbarActivity implements LocalF
        }
 
         // set input controllers
-        mCancelBtn = (Button) findViewById(R.id.folder_picker_btn_cancel);
+        mCancelBtn = findViewById(R.id.folder_picker_btn_cancel);
         mCancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,7 +110,7 @@ public class LocalFolderPickerActivity extends ToolbarActivity implements LocalF
                 finish();
             }
         });
-        mChooseBtn = (Button) findViewById(R.id.folder_picker_btn_choose);
+        mChooseBtn = findViewById(R.id.folder_picker_btn_choose);
         mChooseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
